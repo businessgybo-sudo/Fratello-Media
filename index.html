@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fratello Media | Premier Paid Media for Luxury Charter Boat Businesses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              950: '#030712',
+              900: '#070f1e',
+              850: '#0d192f',
+              800: '#112240',
+              cyan: '#06b6d4',
+              accent: '#38bdf8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(13, 25, 47, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .brand-logo-frame {
+      display: inline-flex;
+      align-items: stretch;
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      background-color: #ffffff;
+      color: #050505;
+      font-family: 'Playfair Display', serif;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    .brand-logo-fratello {
+      padding: 0.25rem 0.65rem 0.25rem 0.75rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      color: #0b0f19;
+    }
+    .brand-logo-media {
+      background: #11141a;
+      color: #ffffff;
+      padding: 0.25rem 0.65rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+    }
+    .hero-video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .hero-video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="bg-brand-950 text-slate-200 font-sans antialiased selection:bg-brand-cyan selection:text-brand-950">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-950/90 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Logo: Works locally with your 1000111355.png or falls back seamlessly -->
+      <a href="#" class="flex items-center group transition-transform hover:scale-[1.02]">
+        <img 
+          src="1000111355.png" 
+          alt="Fratello Media Logo" 
+          class="h-9 sm:h-10 w-auto object-contain bg-white rounded-sm px-1.5 py-0.5 border border-white/20 shadow-md"
+          onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+        />
+        <div class="brand-logo-frame rounded-sm hidden">
+          <span class="brand-logo-fratello">Fratello</span>
+          <span class="brand-logo-media">Media</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#results" class="hover:text-cyan-400 transition-colors">Results</a>
+        <a href="#services" class="hover:text-cyan-400 transition-colors">Specialisation</a>
+        <a href="#founders" class="hover:text-cyan-400 transition-colors">Founders</a>
+        <a href="#testimonials" class="hover:text-cyan-400 transition-colors">Client Proof</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#book-call" class="relative group px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white overflow-hidden shadow-lg transition-all">
+          <span class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all"></span>
+          <span class="relative">Book Demo Call</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Background Luxury Yacht Video -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-white/10">
+    
+    <div class="hero-video-container">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline="true"
+        preload="auto"
+        id="yachtVideo"
+        class="filter brightness-[0.70] contrast-[1.1]"
+        poster="https://images.unsplash.com/photo-1569263979104-865ab7cd8d17?auto=format&fit=crop&w=2000&q=80"
+      >
+        <source src="https://video.wixstatic.com/video/34140b_f036b4afd86c4b96afadfede6364b2d9/1080p/mp4/file.mp4" type="video/mp4" />
+        <source src="https://video.wixstatic.com/video/af0088_b506bf693a29408f86b1df5c83356c27/720p/mp4/file.mp4" type="video/mp4" />
+        <source src="https://video.wixstatic.com/video/1b2f96_73e25f710ed54fc09b2aed868c750f85/720p/mp4/file.mp4" type="video/mp4" />
+      </video>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-[#030712]/60 via-[#030712]/35 to-[#030712]/75 pointer-events-none"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-5 sm:px-6 text-center py-20 sm:py-28 relative z-10">
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-950/80 border border-cyan-400/60 text-cyan-300 text-xs font-semibold mb-6 sm:mb-8 backdrop-blur-md shadow-lg shadow-black/50">
+        <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>The #1 Charter Boat Paid Growth Agency</span>
+      </div>
+
+      <h1 class="font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+        Steer Your Charter Fleet to <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-blue-400">Full-Capacity Bookings.</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-100 mb-8 sm:mb-10 leading-relaxed font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+        Ads, just ads. We don't dilute focus with empty promises. We engineer high-return Meta & social acquisition campaigns tailored exclusively for luxury charter and yacht operations.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto sm:max-w-none">
+        <a href="#book-call" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all">
+          Schedule Your 15-Minute Demo Call
+        </a>
+        <a href="#results" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm glass-card text-slate-100 hover:text-white hover:border-cyan-400/50 hover:bg-white/10 transition-all backdrop-blur-md">
+          View Case Metrics
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <section id="results" class="border-b border-white/5 bg-brand-900/80 py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="space-y-1">
+        <p class="font-display text-3xl md:text-4xl font-bold text-white tracking-tight">$250k+</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Revenue Generated</p>
+      </div>
+      <div class="space-y-1">
+        <p class="font-display text-3xl md:text-4xl font-bold text-cyan-400 tracking-tight">$20k+</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Monthly Ad Spend Managed</p>
+      </div>
+      <div class="space-y-1">
+        <p class="font-display text-3xl md:text-4xl font-bold text-white tracking-tight">6+ Years</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Charter Industry Focus</p>
+      </div>
+      <div class="space-y-1">
+        <p class="font-display text-3xl md:text-4xl font-bold text-sky-400 tracking-tight">2-Click</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Real-Time P&L Transparency</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialisation / Pitch -->
+  <section id="services" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-14">
+        <p class="text-xs font-semibold tracking-widest uppercase text-cyan-400 mb-2">Singular Expertise</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+          No 20-service fluff. Just predictable, recurring yacht charters.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-8 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 font-display font-bold">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Hyper-Targeted Paid Ads</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            We intercept affluent holidaymakers, corporate retreat planners, and private groups using geo-fenced Meta campaigns tailored to seasonal charter demand.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 font-display font-bold">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Instant P&L & ROAS Tracking</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            No convoluted 40-page spreadsheets. In two clicks, see spend, bookings made, direct deposit value, and exact net return per vessel.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-6 font-display font-bold">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Booking Pipeline Optimization</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            We build conversion funnels and automated qualification sequences so inquiries turn into paid deposits before competitors pick up the phone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-brand-900/40 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="text-xs font-semibold tracking-widest uppercase text-cyan-400 mb-2">Proven Results</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">Trusted by Fleet Operators</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="glass-card p-8 rounded-2xl">
+          <p class="text-slate-300 text-sm italic mb-6 leading-relaxed">
+            "Fratello Media helped my business go from having a small amount of monthly bookings to seeing our charter boat running every day. It's a true testament to Jake and Alec and the great team they have."
+          </p>
+          <div class="border-t border-white/5 pt-4">
+            <p class="font-bold text-white text-sm">Brett</p>
+            <p class="text-xs text-slate-400">Charter Boat Business Owner</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="glass-card p-8 rounded-2xl">
+          <p class="text-slate-300 text-sm italic mb-6 leading-relaxed">
+            "Within our first 60 days with Fratello Media, our weekend booking calendar was completely maxed out. Their paid acquisition funnels deliver high-intent private charter guests consistently every single week."
+          </p>
+          <div class="border-t border-white/5 pt-4">
+            <p class="font-bold text-white text-sm">Mike Hussy</p>
+            <p class="text-xs text-slate-400">AB Charter</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="glass-card p-8 rounded-2xl">
+          <p class="text-slate-300 text-sm italic mb-6 leading-relaxed">
+            "Before partnering with Fratello Media, we were burning cash relying on hit-or-miss word of mouth. Now, our ad spend yields predictable 4x+ returns and our charter vessels stay booked weeks in advance."
+          </p>
+          <div class="border-t border-white/5 pt-4">
+            <p class="font-bold text-white text-sm">Darren Sammy</p>
+            <p class="text-xs text-slate-400">Charter with Captain Sammy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founders Section -->
+  <section id="founders" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="glass-card rounded-3xl p-8 sm:p-14 border border-white/10 flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2 space-y-5">
+          <span class="text-xs uppercase font-bold tracking-widest text-cyan-400">Leadership & Team</span>
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">Meet Jake & Alec Mascolo</h2>
+          <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+            We founded Fratello Media on a fundamental belief: charter operators don't need another generic agency delivering vanity impressions. They need boats in the water with paying guests on board.
+          </p>
+          <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+            Over the past three years, we have handpicked global media buyers and creatives dedicated to mastering booking velocity, lead response mechanisms, and charter unit economics.
+          </p>
+          <div class="pt-2">
+            <span class="inline-block py-2 px-4 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">
+              Direct access to founders on every partner account.
+            </span>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 flex items-center justify-center">
+          <div class="w-full max-w-md h-72 rounded-2xl bg-gradient-to-tr from-cyan-950 via-brand-850 to-blue-950 border border-white/10 flex flex-col items-center justify-center p-6 text-center">
+            <div class="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-300 mb-4 font-display text-xl font-bold">
+              J & A
+            </div>
+            <p class="font-display font-bold text-white text-base">Jake & Alec Mascolo</p>
+            <p class="text-xs text-cyan-400 uppercase tracking-widest mt-1">Co-Founders, Fratello Media</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA Section -->
+  <section id="book-call" class="py-20 bg-brand-900/60 border-t border-white/5 relative">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold tracking-widest uppercase text-cyan-400 mb-2">Claim Your Slot</p>
+        <h2 class="font-display text-2xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+          Book Your 15-Minute Strategy Call
+        </h2>
+        <p class="text-sm text-slate-400 max-w-xl mx-auto">
+          We’ll break down your current charter booking rate, inspect your geographic market, and show you exactly how many vessels we can keep active every week.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 sm:p-10 rounded-3xl border border-white/10 max-w-xl mx-auto shadow-2xl">
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Redirecting to calendar...');">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Full Name</label>
+            <input type="text" placeholder="Captain Alex Morgan" required class="w-full px-4 py-3 rounded-xl bg-brand-950/70 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Charter Fleet / Business Name</label>
+            <input type="text" placeholder="Pacific Horizon Charters" required class="w-full px-4 py-3 rounded-xl bg-brand-950/70 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Business Email</label>
+            <input type="email" placeholder="alex@pacificcharters.com" required class="w-full px-4 py-3 rounded-xl bg-brand-950/70 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Current Monthly Ad Spend</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-brand-950/70 border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400">
+              <option>$0 (Relying purely on referrals/organic)</option>
+              <option>$1,000 - $3,000 / month</option>
+              <option>$3,000 - $10,000 / month</option>
+              <option>$10,000+ / month</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-95 transition-opacity shadow-lg shadow-cyan-500/25 mt-4">
+            Find A Time On Jake & Alec's Calendar &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/5 bg-brand-950 text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <span class="font-display font-bold text-white tracking-wider">FRATELLO MEDIA</span>
+        <span>&copy; Fratello Media. All rights reserved.</span>
+      </div>
+      <div class="space-x-6">
+        <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-400 transition-colors">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const v = document.getElementById('yachtVideo');
+      if (!v) return;
+      v.muted = true;
+      v.defaultMuted = true;
+      
+      const tryPlay = () => {
+        const p = v.play();
+        if (p !== undefined) {
+          p.catch(() => {});
+        }
+      };
+
+      tryPlay();
+      window.addEventListener('load', tryPlay);
+      document.addEventListener('touchstart', tryPlay, { once: true });
+      document.addEventListener('click', tryPlay, { once: true });
+    })();
+  </script>
+
+</body>
+</html>
